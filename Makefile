@@ -1,7 +1,7 @@
 ## Makefile for those who prefer to knit from command line
 ## not needed if you knit from RStudio.
 ## 
-SOURCES = $(wildcard *.rmd)
+SOURCES = index.rmd
 HTML = $(patsubst %.rmd, %.html, $(SOURCES))
 PDF = $(patsubst %.rmd, %.pdf, $(SOURCES))
 # tex versions of the files, just to clean up
