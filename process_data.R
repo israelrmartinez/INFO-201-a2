@@ -3,15 +3,16 @@
 ###
 ### Your final product should contain the code along the following lines:
 
-##    ---------- Google Civic Platform ----------
+##    ---------- Google Civic Information API ----------
 ## 1. create the google civic platform request and httr::GET() the result
 ##    you need to include your api key in the request.  See the documentation
 ##    https://developers.google.com/civic-information/
+##    https://developers.google.com/civic-information/docs/v2/
 ##    in particular the reference section.
 ##
-##    Note: you can submit the requests through your browser.  If unsure, or if
-##    httr::GET gives you an error, you may always put the address in your browser's
-##    address bar.  If correct, it will display the corresponding JSON data.  If
+##    Note: you can try the requests by submitting these through your browser by entering the
+##    full query (base url, endpoint, query) in your browser's address bar.
+##    If it is correct correct, it will display the corresponding JSON data.  If
 ##    incorrect, you get an error message.
 
 ## 2. extract the elected officials' data from the result

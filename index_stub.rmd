@@ -24,8 +24,9 @@ knitr::opts_chunk$set(error=TRUE)
 
 ```{r address, include=FALSE}
 ## insert your address here.  It does not to have quite complete.
-## Test your code with addresses in different states, see if it works
 address <- "San Francisco, CA"
+## Test your code with addresses in different states, see if it works
+## Note that if you change the address, your code must re-load the data and re-do the tables and figures. 
 ```
 
 ```{r processData}
