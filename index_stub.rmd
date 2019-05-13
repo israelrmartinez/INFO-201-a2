@@ -41,7 +41,7 @@ tbl <- repTable(address1)
 ## You may want to consider knitr::kable for improved table printing, look
 ## for details at the rmarkdown page at
 ## http://rmarkdown.rstudio.com/index.html
-knit::kabl(tbl)
+knit::kable(tbl)
 ```
 
 # Elected officials for the second address
@@ -51,6 +51,6 @@ few words and print the address in an inline code chunk
 
 ```{r}
 tbl <- repTable(address2)
-knit::kabl(tbl)
+knit::kable(tbl)
 ```
 
