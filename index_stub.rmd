@@ -1,68 +1,56 @@
 ---
-title: "Who Represents You?"
+title: "Who are the elected representatives?"
 output:
   html_document: default
 css: styles.css
 ---
+
 
 This is the stub of the .rmd file you should use to create you
 representatives' overview.  Please fill in the missing part, write the
 code, and delete the instructions.
 
 
-# Your Elected Officials
-
-
-```{r init, include=FALSE}
-## load API keys
-source("keys.R")
-## you may also load necessary libraries and set various options here
+```{r setup, include=FALSE}
+## this is the code chunk for R setup.
+## You may load libraries and your google key here
+## You can also set various knitr options here
+knitr::opts_chunk$set(echo=FALSE, message=FALSE)
 library(dplyr)
-knitr::opts_chunk$set(error=TRUE)
-                           # continue compiling on error
+source("~/Documents/keys.R")
+source('process-data.R')
 ```
 
-```{r address, include=FALSE}
-## insert your address here.  It does not to have quite complete.
-address <- "San Francisco, CA"
-## Test your code with addresses in different states, see if it works
-## Note that if you change the address, your code must re-load the data and re-do the tables and figures. 
+Set the addresses in a code chunk.  These are the addresses the user
+can modify
+```{r}
+address1 <- "puyallup, WA"
+                           # imprecise addresses may (or may not) work
+address2 <- "2199 S University Blvd, Denver, CO 80208"
+                           # good if you have correct street address
 ```
 
-```{r processData}
-## Make the main computations here.  Keep the functions in a separate file(s)
-## and only include the final operations here.
-## You have to 'source()' your main R file(s) here:
-source('process_data.R')
-## You may also have to do some additional processing here
-```
+# Elected officials for the first address
 
-## Your Representatives
-
-Explain briefly what and how do you do here.  Provide links to the
-corresponding API-s.
-
-Include a table that includes all the officials for the given addres.  
+Write a few words and print the address in an inline code chunk
 
 ```{r}
-## You may want to print the table in a nice way using `knitr::kable()`
-## when you have already created it.
-knitr::kable(repTable)
+tbl <- repTable(address1)
+## You may also want to do some additional processing here
+## Obviosly, you may pick different function and variable name.
+## You may want to consider knitr::kable for improved table printing, look
+## for details at the rmarkdown page at
+## http://rmarkdown.rstudio.com/index.html
+knit::kabl(tbl)
 ```
 
-## House of Representatives
+# Elected officials for the second address
 
-Make the visualization of party affiliation of the the congressional representatives
-(in the House of Representatives, _not_ the Senate) for this address.
+This section should be very similar to the previous section: write a
+few words and print the address in an inline code chunk
 
 ```{r}
-##
-## ggplot(stateReps, aes(gender)) + ...
+tbl <- repTable(address2)
+knit::kabl(tbl)
 ```
 
-Make another visualization too.
-
-## Pick a Particular Representative.  Insert the name here in the title
-
-Write a paragraph where you tell her name, party, age, and twitter
-link.  Find out how often she recently voted with the majority.
