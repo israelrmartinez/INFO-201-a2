@@ -24,7 +24,6 @@ library("dplyr")
   base <- "https://www.googleapis.com/civicinfo/v2/representatives"
   address <- "7009 Sunset Blvd, Los Angeles, CA 90028"
   
-  
   query <- list(address=address, key=key)
   res <- httr::GET(base, query=query)
   httr::content(res)
